@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Twice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Logo_of_TWICE.svg/690px-Logo_of_TWICE.svg.png">
+</head>
+<body>
+   <section class="reproductor-musica">
+    <h4>REPRODUCTOR DE TWICE</h4>
+    <div class="selector-archivos">
+        <div class="selector selector-musica">
+            <label for="musica-input">+ Añadir Canción</label>
+            
+            <input id="musica-input" type="file" multiple accept="audio/*">
+        </div>
+    </div>
+    <h6>Selecciona canciones mp3 desde tu PC o utiliza las canciones del respositorio de github</h6>
+    <div class="playlist">
+        <h5>Mi Playlist</h5>
+        <ul id="playlist-container">
+        </ul>
+    </div>
+
+    <h3>Titulo</h3>
+    <p>Nombre</p>
+    <audio id="cancion">
+        <source src="" type="audio/mpeg"/>
+    </audio>
+
+    <input type="range" value="0" id="progreso"/>
+    <div class="tiempo-cancion">
+        <span id="tiempoActual">0:00</span> / <span id="duracionTotal">0:00</span>
+      </div>
+    <div class="controles">
+        <button class="aleatorio control">
+            <i class="bi bi-shuffle" id="iconoAleatorio"></i>
+        </button>
+        <button class="atras control"><i class="bi bi-rewind-fill"></i></button>
+        <button class="boton-reproducir-pausar iconoControl"><i class="bi bi-play-fill" id="iconoControl"></i></button>
+        <button class="adelante control"><i class="bi bi-fast-forward-fill"></i></button>
+        <button class="repetir control">
+            <i class="bi bi-repeat" id="iconoRepetir"></i>
+        </button>
+    </div>
+    <div class="controles-volumen">
+        <i class="bi bi-volume-down-fill"></i>
+        <input type="range" id="sliderVolumen" min="0" max="1" step="0.01" value="1">
+      </div>
+   </section>
+    <script src="app.js" ></script>
+</body>
+</html>
